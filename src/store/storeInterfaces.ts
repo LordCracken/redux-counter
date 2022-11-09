@@ -1,16 +1,13 @@
-export interface IState {
+export interface ICounterState {
   counter: number;
   showCounter: boolean;
 }
 
-export interface IActions {
-  type: CounterActions;
-  amount?: number;
+export interface IAuthState {
+  isAuth: boolean;
 }
 
-export enum CounterActions {
-  increment = 'increment',
-  decrement = 'decrement',
-  increase = 'increase',
-  toggle = 'toggle',
+export interface IState {
+  counter: ICounterState;
+  auth: IAuthState;
 }
